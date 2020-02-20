@@ -432,6 +432,13 @@
                         </b-form-group>
                     </b-col>
                 </b-row>
+                <br>
+                <b-row>
+                    <b-col lg="10">
+                        <h5>Education Details</h5>
+                    </b-col>
+                </b-row>
+                <hr>
                 <b-row v-for="(education,index) in education" :key="index">
                     <b-col lg="5">
                         <b-form-group
@@ -479,9 +486,6 @@
                 <b-row>
                     <b-col lg="3">
                         <h5>Employment Details</h5>
-                    </b-col>
-                    <b-col lg="4" class="mr-4">
-                        <small>leave blank if person is unemployed</small>
                     </b-col>
                 </b-row>
                 <hr/>

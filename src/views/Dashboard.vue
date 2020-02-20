@@ -122,7 +122,9 @@
                           </b-row>
                       </template>
                       <template v-else>
-                          <JobAccuracy :cData="getDashboardData"  style="height:820px; width:820px;"/>
+                          <b-row class="justify-content-center">
+                            <JobAccuracy :cData="getDashboardData"  style="height:820px; width:820px;"/>
+                          </b-row>
                       </template>
                   </CCardBody>
               </CCard>
