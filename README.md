@@ -1,7 +1,7 @@
 **Required Softwares**
 - Git
 - Node.Js
-
+- Xampp
 
 **NOTES**
 - npm install
