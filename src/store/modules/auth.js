@@ -70,7 +70,7 @@ const mutations = {
         //set axios base token
         axios.defaults.headers.common['Authorization'] = 'Bearer ' + state.accessToken;
         router.push({
-            path: "/dashboard"
+            path: "/visualization"
         });
     },
     [LOGIN.fail](state,payload) {

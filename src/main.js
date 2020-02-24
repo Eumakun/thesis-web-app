@@ -51,7 +51,7 @@ router.beforeEach((to, from, next) => {
     // if logged in
     if (_.includes(exemptedLoggedInRoutes, to.path)) {
       router.push({
-        path: "/dashboard"
+        path: "/visualization"
       });
     } else {
       next()

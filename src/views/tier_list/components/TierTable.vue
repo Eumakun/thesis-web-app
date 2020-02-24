@@ -97,6 +97,15 @@
                     e.course_name = e.course.name
                     e.job_type_name = e.job_type.name
                     e.industry_name = e.industry.name
+                    if(e.tier_number == 1) {
+                        e.tier = "Highly Relevant"
+                    }
+                    if(e.tier_number == 2) {
+                        e.tier = "Somewhat Relevant"
+                    }
+                    if(e.tier_number == 1) {
+                        e.tier = "Not Relevant"
+                    }
                 })
                 this.total = this.getTierTotal
             },
