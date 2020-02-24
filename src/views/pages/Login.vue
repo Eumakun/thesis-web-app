@@ -38,7 +38,7 @@
             style="width:44%"
             body-wrapper
           >
-            <h2>TESDA WEB VISUALIZATION TOOL</h2>
+            <h2>gWEB VISUALIZATION TOOL</h2>
             <p>Evaluating a Web Visualization Tool in the Assessment of the Effectiveness of TESDA Programs in Davao Oriental</p>
           </CCard>
         </CCardGroup>

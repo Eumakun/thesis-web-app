@@ -9,9 +9,25 @@
           </template>
           <template v-if="!getFetchingDashboardState.initial">
               <CRow class="mb-2">
-                  <CCol sm="5">
-                      <h4 id="traffic" class="card-title mb-0">Dashboard</h4>
+                  <CCol sm="4">
+                      <h4 id="traffic" class="card-title mb-0">Visualization</h4>
                       <div class="small text-muted">Updated as of {{ $moment(new Date).format(("LL")) }}</div>
+                  </CCol>
+                  <CCol sm="3">
+                  </CCol>
+                  <CCol sm="2">
+                  </CCol>
+                  <CCol sm="3">
+                      <Select
+                              :options="schoolOptions"
+                              :onSelect="onSelectSchool"
+                              :disabled="getFetchingSchoolState.initial"
+                              :search="true"
+                              :selected="getFetchingSchoolState.initial ? {
+                                        value: null,
+                                        text: 'Fetching Schools..'
+                                    } : schoolSelected"/>
+                      <div class="small text-muted">Filter Visualization Data Per School</div>
                   </CCol>
               </CRow>
               <CRow class="mb-2" >
@@ -122,8 +138,8 @@
                           </b-row>
                       </template>
                       <template v-else>
-                          <b-row class="justify-content-center">
-                            <JobAccuracy :cData="getDashboardData"  style="height:820px; width:820px;"/>
+                          <b-row class="justify-content-center" style="margin-left:19%">
+                            <JobAccuracy :cData="getDashboardData"  style="height:800px; width:800px;"/>
                           </b-row>
                       </template>
                   </CCardBody>
@@ -137,6 +153,7 @@
 import MainChartExample from '../components/charts/MainChartExample'
 import CChartPieExample from '../components/charts/CChartPieExample'
 import JobAccuracy from '../components/charts/JobAccuracy'
+import Select from '@/components/base/Select'
 import CChartBarExample from '../components/charts/CChartBarExample'
 import GenderBarChart from '../components/charts/GenderBarChart'
 import DateGraduated from '../components/charts/DateGraduated'
@@ -149,6 +166,7 @@ export default {
     MainChartExample,
     CChartPieExample,
     GenderBarChart,
+    Select,
     CChartBarExample,
     DateGraduated,
     JobAccuracy,
@@ -158,6 +176,10 @@ export default {
   data () {
     return {
       selected: 'Month',
+        schoolSelected:{
+          value: "",
+            text: "--"
+      }
     }
   },
 
@@ -165,15 +187,28 @@ export default {
     ...mapGetters([
       "getDashboardData",
       "getFetchingDashboardState",
-    ])
+        "getSchools",
+        "getFetchingSchoolState",
+    ]),
+      schoolOptions() {
+        let arr = this.getSchools.map(e => ({value: e.id, text: e.name}))
+          arr.unshift({value: "", text: "--"})
+          return arr
+      },
   },
   mounted() {
     this.fetchingDashboard()
+    this.fetchSchools()
   },
   methods: {
     ...mapActions([
-      "fetchingDashboard"
+      "fetchingDashboard",
+        "fetchSchools",
     ]),
+    onSelectSchool(e) {
+        this.schoolSelected = e
+        this.fetchingDashboard({school_id: e.value})
+    },
     color (value) {
       let $color
       if (value <= 25) {

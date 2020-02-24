@@ -82,8 +82,8 @@ function configRoutes () {
       component: TheContainer,
       children: [
         {
-          path: 'dashboard',
-          name: 'Dashboard',
+          path: 'visualization',
+          name: 'Visualization',
           component: Dashboard
         },
         {
