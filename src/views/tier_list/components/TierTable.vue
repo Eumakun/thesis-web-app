@@ -104,7 +104,7 @@
                         e.tier = "Relevant"
                     }
                     if(e.tier_number == 3) {
-                        e.tier = "Not Relevant"
+                        e.tier = "Somewhat Relevant"
                     }
                 })
                 this.total = this.getTierTotal
