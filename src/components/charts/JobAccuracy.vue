@@ -2,7 +2,7 @@
   <CChartPie
     :datasets="defaultDatasets"
     :options="options"
-    :labels="['Highly Relevant - '+ tier1Total + '%', 'Somewhat Relevant - '+ tier2Total + '%', 'Not Relevant - '+ tier3Total + '%','Unclassified - '+ unclassifiedTotal + '%' ]"
+    :labels="['Highly Relevant - '+ tier1Total + '%', 'Relevant Relevant - '+ tier2Total + '%', 'Slightly Relevant - '+ tier3Total + '%','Not Relevant - '+ unclassifiedTotal + '%' ]"
   />
 </template>
 

@@ -39,7 +39,7 @@
             body-wrapper
           >
             <h2>WEB VISUALIZATION TOOL</h2>
-            <p>Evaluating a Web Visualization Tool in the Assessment of the Effectiveness of TESDA Programs in Davao Oriental</p>
+            <p>Evaluating a Web Visualization Tool in the Assessment of the Effectiveness of Tech-Voc Programs.</p>
           </CCard>
         </CCardGroup>
       </CCol>

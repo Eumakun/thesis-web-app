@@ -133,11 +133,11 @@
                     },
                     {
                         value: 2,
-                        text: "Somewhat Relevant"
+                        text: "Relevant"
                     },
                     {
                         value: 3,
-                        text: "Not Relevant"
+                        text: "Slightly Relevant"
                     },
                 ],
                 type: "create",

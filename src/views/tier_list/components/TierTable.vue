@@ -65,7 +65,7 @@
                     },
                     {
                         title: "Tier Type",
-                        field: "tier_number",
+                        field: "tier",
                         thClass: "text-center",
                         tdClass: "text-center",
                         sortable: false,
@@ -101,9 +101,9 @@
                         e.tier = "Highly Relevant"
                     }
                     if(e.tier_number == 2) {
-                        e.tier = "Somewhat Relevant"
+                        e.tier = "Relevant"
                     }
-                    if(e.tier_number == 1) {
+                    if(e.tier_number == 3) {
                         e.tier = "Not Relevant"
                     }
                 })
