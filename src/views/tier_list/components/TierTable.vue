@@ -98,7 +98,7 @@
                     e.job_type_name = e.job_type.name
                     e.industry_name = e.industry.name
                      if(e.tier_number == 1) {
-                        e.tier = "Tier 1-Relevant"
+                        e.tier = "Tier 1-Highly Relevant"
                     }
                     if(e.tier_number == 2) {
                         e.tier = "Tier 2-Relevant"

@@ -129,7 +129,7 @@
                 tierOptions: [
                     {
                         value: 1,
-                        text: "Tier 1-Relevant"
+                        text: "Tier 1-Highly Relevant"
                     },
                     {
                         value: 2,
