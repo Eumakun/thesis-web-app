@@ -109,6 +109,8 @@ const mutations = {
             success: false,
             fail: false,
         }
+        state.surveysDatatable = []
+        state.surveysTotal = 0
     },
     [FETCH_SURVEY_DATATABLE.success](state,payload) {
         state.fetchingSurveysDatatable = {

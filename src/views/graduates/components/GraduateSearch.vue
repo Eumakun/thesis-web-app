@@ -36,8 +36,8 @@
 <!--                                    } : jobTypeSelected"/>-->
 <!--            </b-col>-->
             <b-col lg="3" md="3">
-                <b-button variant="primary" @click="search">Search</b-button> &nbsp;
-                <b-button variant="primary" @click="clear">Clear Search</b-button>
+                <b-button variant="primary" :disabled="getFetchingSurveyDatatableState.initial" @click="search">Search</b-button> &nbsp;
+                <b-button variant="primary" :disabled="getFetchingSurveyDatatableState.initial" @click="clear">Clear Search</b-button>
             </b-col>
         </b-row>
         <b-row>
@@ -80,6 +80,9 @@
         mounted() {
         },
         computed: {
+            ...mapGetters([
+                "getFetchingSurveyDatatableState"
+            ])
         },
         methods: {
             search() {
