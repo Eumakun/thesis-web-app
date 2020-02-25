@@ -97,14 +97,17 @@
                     e.course_name = e.course.name
                     e.job_type_name = e.job_type.name
                     e.industry_name = e.industry.name
-                    if(e.tier_number == 1) {
-                        e.tier = "Highly Relevant"
+                     if(e.tier_number == 1) {
+                        e.tier = "Tier 1-Relevant"
                     }
                     if(e.tier_number == 2) {
-                        e.tier = "Relevant"
+                        e.tier = "Tier 2-Relevant"
                     }
                     if(e.tier_number == 3) {
-                        e.tier = "Not Relevant"
+                        e.tier = "Tier 3-Slightly Relevant"
+                    }
+                    if(e.tier_number == 4) {
+                        e.tier = "Tier 4-Not Relevant"
                     }
                 })
                 this.total = this.getTierTotal

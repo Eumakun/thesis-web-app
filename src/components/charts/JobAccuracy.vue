@@ -2,7 +2,7 @@
   <CChartPie
     :datasets="defaultDatasets"
     :options="options"
-    :labels="['Highly Relevant - '+ tier1Total + '%', 'Relevant Relevant - '+ tier2Total + '%', 'Slightly Relevant - '+ tier3Total + '%','Not Relevant - '+ unclassifiedTotal + '%' ]"
+    :labels="['Tier 1-Highly Relevant - '+ tier1Total + '%', 'Tier 2-Relevant - '+ tier2Total + '%', 'Tier 3-Slightly Relevant - '+ tier3Total + '%','Tier 4-Not Relevant - '+ tier4Total + '%', 'Unclassified - '+ unclassifiedTotal + '%' ]"
   />
 </template>
 
@@ -90,6 +90,13 @@ export default {
         return 0
       }
     },
+    tier4Total() {
+      if(this.cData.tier4 > 0) {
+        return ((this.cData.tier4 / this.cData.total) * 100).toFixed(2)
+      } else {
+        return 0
+      }
+    },
     unclassifiedTotal() {
       if(this.cData.unclassified > 0) {
         return ((this.cData.unclassified / this.cData.total) * 100).toFixed(2)
@@ -103,10 +110,11 @@ export default {
           backgroundColor: [
             '#41B883',
             '#FFCC00',
+            '#FF4500',
             '#f87979',
             '#808080',
           ],
-          data: [this.cData.tier1, this.cData.tier2, this.cData.tier3, this.cData.unclassified]
+          data: [this.cData.tier1, this.cData.tier2, this.cData.tier3, this.cData.tier4, this.cData.unclassified]
         }
       ]
     }

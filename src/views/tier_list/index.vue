@@ -129,15 +129,19 @@
                 tierOptions: [
                     {
                         value: 1,
-                        text: "Highly Relevant"
+                        text: "Tier 1-Relevant"
                     },
                     {
                         value: 2,
-                        text: "Relevant"
+                        text: "Tier 2-Relevant"
                     },
                     {
                         value: 3,
-                        text: "Slightly Relevant"
+                        text: "Tier 3-Slightly Relevant"
+                    },
+                    {
+                        value: 4,
+                        text: "Tier 4-Not Relevant"
                     },
                 ],
                 type: "create",
