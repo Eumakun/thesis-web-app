@@ -54,12 +54,14 @@ export default {
         {
           label: 'Employment Rate Per Age',
           backgroundColor: '#41B883',
-          data: this.cData.employedAge.map(e => parseFloat(parseInt(e.employed) / this.cData.total * 100).toFixed(2) ),
+          data: this.cData.employedAge.map(e => parseFloat(parseInt(e.employed) / (parseFloat(e.employed) + this.cData.unemployedAge.filter(x => 
+            x.age == e.age)[0].unemployed) * 100).toFixed(2) ),
         },
         {
           label: 'Unemployment Rate Per Age',
           backgroundColor: '#f87979',
-          data: this.cData.unemployedAge.map(e => parseFloat(parseInt(e.unemployed) / this.cData.total * 100).toFixed(2) ),
+          data: this.cData.unemployedAge.map(e => parseFloat(parseInt(e.unemployed) / (parseFloat(e.unemployed) + this.cData.employedAge.filter(x => 
+            x.age == e.age)[0].employed) * 100).toFixed(2)),
         },
       ]
     }

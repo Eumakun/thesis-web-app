@@ -54,12 +54,14 @@
                     {
                         label: 'Employment Rate Per Gender',
                         backgroundColor: '#41B883',
-                        data: this.cData.employedGender.map(e => parseFloat(parseInt(e.employed) / this.cData.total * 100).toFixed(2) ),
+                        data: this.cData.employedGender.map(e => parseFloat(parseInt(e.employed) / (parseFloat(e.employed) + this.cData.unemployedGender.filter(x => 
+                        x.gender == e.gender)[0].unemployed) * 100).toFixed(2) ),
                     },
                     {
                         label: 'Unemployment Rate Per Gender',
                         backgroundColor: '#f87979',
-                        data: this.cData.unemployedGender.map(e => parseFloat(parseInt(e.unemployed) / this.cData.total * 100).toFixed(2) ),
+                        data: this.cData.unemployedGender.map(e => parseFloat(parseInt(e.unemployed) / (parseFloat(e.unemployed) + this.cData.employedGender.filter(x => 
+                        x.gender == e.gender)[0].employed)  * 100).toFixed(2) ),
                     },
                 ]
             }

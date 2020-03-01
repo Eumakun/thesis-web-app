@@ -55,12 +55,14 @@
                     {
                         label: 'Employment Rate Per Year Graduated',
                         backgroundColor: '#41B883',
-                        data: this.cData.employedDateGraduated.map(e => parseFloat(parseInt(e.employed) / this.cData.total * 100).toFixed(2) ),
+                        data: this.cData.employedDateGraduated.map(e => parseFloat(parseInt(e.employed) / (parseFloat(e.employed) + this.cData.unemployedDateGraduated.filter(x => 
+                        x.year == e.year)[0].unemployed) * 100).toFixed(2)),
                     },
                     {
                         label: 'Unemployment Rate Per Year Graduated',
                         backgroundColor: '#f87979',
-                        data: this.cData.unemployedDateGraduated.map(e => parseFloat(parseInt(e.unemployed) / this.cData.total * 100).toFixed(2) ),
+                        data: this.cData.unemployedDateGraduated.map(e => parseFloat(parseInt(e.unemployed) / (parseFloat(e.unemployed) + this.cData.employedDateGraduated.filter(x => 
+                        x.year == e.year)[0].employed) * 100).toFixed(2) ),
                     },
                 ]
             }
