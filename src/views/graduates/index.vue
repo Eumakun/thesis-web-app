@@ -8,14 +8,12 @@
                 <b-row lg="12" class="mb-2 pull-right">
                     <b-col lg="12">
                         <b-button variant="primary" @click="showUserModal">Create Survey Data</b-button> &nbsp;
-                        <b-button-group>
-                        <b-button variant="primary" @click="$refs.importExcel.show()">Import Survey Data</b-button>
+                        <b-button variant="primary" @click="$refs.importExcel.show()">Import Survey Data</b-button> &nbsp;
                         <b-btn :class="showCollapse ? 'collapsed' : null"
                                :aria-expanded="showCollapse ? 'true' : 'false'"
                                aria-controls="collapse1"
                                @click="showCollapse = !showCollapse"
                                variant="secondary"><span><CIcon :name="showCollapse ? 'cil-chevron-bottom' : 'cil-chevron-top'"></CIcon></span></b-btn>
-                        </b-button-group>
                     </b-col>
                 </b-row>
                 <b-row>
@@ -214,8 +212,9 @@
                 </b-row>
                 <br>
                 <b-row>
-                    <b-col lg="10">
-                        <h5>Employment Details</h5>
+                    <b-col lg="10 mb-0">
+                        <h5 class="mb-0">Employment Details</h5>
+                        <small >Leave blank if unemployed</small>
                     </b-col>
                     <b-col lg="2" class="float-right">
                             <b-button variant="success" size="sm" @click="addEmployment"><i class="fa fa-plus"></i> Add Details</b-button>
