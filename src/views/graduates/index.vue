@@ -9,11 +9,16 @@
                     <b-col lg="12">
                         <b-button variant="primary" @click="showUserModal">Create Survey Data</b-button> &nbsp;
                         <b-button variant="primary" @click="$refs.importExcel.show()">Import Survey Data</b-button> &nbsp;
+<!--                        <b-btn :class="showCollapse ? 'collapsed' : null"-->
+<!--                               :aria-expanded="showCollapse ? 'true' : 'false'"-->
+<!--                               aria-controls="collapse1"-->
+<!--                               @click="showCollapse = !showCollapse"-->
+<!--                               variant="secondary"><span><CIcon :name="showCollapse ? 'cil-chevron-bottom' : 'cil-chevron-top'"></CIcon></span></b-btn>-->
                         <b-btn :class="showCollapse ? 'collapsed' : null"
                                :aria-expanded="showCollapse ? 'true' : 'false'"
                                aria-controls="collapse1"
                                @click="showCollapse = !showCollapse"
-                               variant="secondary"><span><CIcon :name="showCollapse ? 'cil-chevron-bottom' : 'cil-chevron-top'"></CIcon></span></b-btn>
+                               variant="secondary"><span><i class="fa fa-search"></i></span></b-btn>
                     </b-col>
                 </b-row>
                 <b-row>
