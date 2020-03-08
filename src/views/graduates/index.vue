@@ -89,7 +89,7 @@
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col lg="5">
+                    <b-col lg="8">
                         <b-form-group
                         id="address"
                         label="Address"
@@ -104,21 +104,21 @@
                         ></b-form-input>
                         </b-form-group>
                     </b-col>
-                    <b-col lg="3">
-                        <b-form-group
-                                id="age"
-                                label="Age"
-                                label-for="age"
-                        >
-                            <b-form-input
-                                    id="age"
-                                    v-model="form.age"
-                                    type="number"
-                                    required
-                                    placeholder="Age"
-                            ></b-form-input>
-                        </b-form-group>
-                    </b-col>
+<!--                    <b-col lg="3">-->
+<!--                        <b-form-group-->
+<!--                                id="age"-->
+<!--                                label="Age"-->
+<!--                                label-for="age"-->
+<!--                        >-->
+<!--                            <b-form-input-->
+<!--                                    id="age"-->
+<!--                                    v-model="form.age"-->
+<!--                                    type="number"-->
+<!--                                    required-->
+<!--                                    placeholder="Age"-->
+<!--                            ></b-form-input>-->
+<!--                        </b-form-group>-->
+<!--                    </b-col>-->
                     <b-col lg="4">
                         <b-form-group
                                 id="gender"
@@ -366,7 +366,7 @@
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col lg="5">
+                    <b-col lg="8">
                         <b-form-group
                         id="address"
                         label="Address"
@@ -382,22 +382,22 @@
                         ></b-form-input>
                         </b-form-group>
                     </b-col>
-                    <b-col lg="3">
-                        <b-form-group
-                                id="age"
-                                label="Age"
-                                label-for="age"
-                        >
-                            <b-form-input
-                                    id="age"
-                                    disabled
-                                    v-model="form.age"
-                                    type="number"
-                                    required
-                                    placeholder="Age"
-                            ></b-form-input>
-                        </b-form-group>
-                    </b-col>
+<!--                    <b-col lg="3">-->
+<!--                        <b-form-group-->
+<!--                                id="age"-->
+<!--                                label="Age"-->
+<!--                                label-for="age"-->
+<!--                        >-->
+<!--                            <b-form-input-->
+<!--                                    id="age"-->
+<!--                                    disabled-->
+<!--                                    v-model="form.age"-->
+<!--                                    type="number"-->
+<!--                                    required-->
+<!--                                    placeholder="Age"-->
+<!--                            ></b-form-input>-->
+<!--                        </b-form-group>-->
+<!--                    </b-col>-->
                     <b-col lg="4">
                         <b-form-group
                                 id="gender"
